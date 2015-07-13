@@ -9,7 +9,7 @@
         .service('chartTopper', chartTopper);
 
     /** @ngInject */
-    function chartTopper($log, $window) {
+    function chartTopper($log, $window, donutChart) {
 
         var WIDTH = 150;
         var HEIGHT = 200;
@@ -62,9 +62,14 @@
                 })
         }
 
+        function buildDonutChart (data, element){
+            donutChart.build(data, element);
+        }
+
         var public_api = {
             buildBarChart: buildBarChart,
-            buildLineChart: buildLineChart
+            buildLineChart: buildLineChart,
+            buildDonutChart: buildDonutChart
         };
 
         return public_api;

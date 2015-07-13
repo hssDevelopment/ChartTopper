@@ -22,8 +22,10 @@
       ];
       var element = '#d3-test';
       var lineElement = '#d3-line-test';
+      var donutElement = '#d3-donut-test';
 
       chartTopper.buildBarChart(data, element);
       chartTopper.buildLineChart(lineData, lineElement);
+      chartTopper.buildDonutChart(data, donutElement);
   }
 })();
