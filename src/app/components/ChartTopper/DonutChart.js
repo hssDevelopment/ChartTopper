@@ -11,7 +11,6 @@
         .module('chartTopperDemo')
         .service('donutChart', donutChart);
 
-
         function donutChart() {
 
             return{
@@ -43,18 +42,10 @@
                     //add height
                     .attr("height", height);
 
-                outerElement.append("text")
-                    .text("Test Text");
-
                     //add pieces to arc
                 var svg = outerElement.append("g")
                         //Center the element
                         .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-                svg.append("text")
-                   .attr("dy", ".35em")
-                   .attr("text-anchor", "middle")
-                   .text("Test Text");
 
                 //assemble.
                 var path = svg.selectAll("path")
@@ -64,7 +55,23 @@
                     .attr("stroke", "white")
                     .attr("stroke-width", 0.5)
                     .attr("fill", function(d, i) { return color(i); })
-                    .attr("d", arc)
+                    .attr("d", arc);
+
+                svg.selectAll("text")
+                    .data(pie(data))
+                    .enter()
+                    .append("text")
+                    .attr("transform", function(d) {return "translate(" + arc.centroid(d) + ")"; })
+                    .attr("text-anchor", "middle")
+                    .text(function(d){
+                        return d.value;
+                    });
+
+
+                svg.append("text")
+                    .attr("dy", ".35em")
+                    .attr("text-anchor", "middle")
+                    .text("Test Text");
 
 
             }
