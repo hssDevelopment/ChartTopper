@@ -37,22 +37,36 @@
                     //How much does this fill the container
                     .outerRadius(radius - 5);
 
-                var svg = d3.select(element).append("svg")
+                var outerElement = d3.select(element).append("svg")
                     //Add width
                     .attr("width", width)
                     //add height
-                    .attr("height", height)
+                    .attr("height", height);
+
+                outerElement.append("text")
+                    .text("Test Text");
+
                     //add pieces to arc
-                    .append("g")
-                    //Center the element
-                    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+                var svg = outerElement.append("g")
+                        //Center the element
+                        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+                svg.append("text")
+                   .attr("dy", ".35em")
+                   .attr("text-anchor", "middle")
+                   .text("Test Text");
 
                 //assemble.
                 var path = svg.selectAll("path")
                     .data(pie(data))
-                    .enter().append("path")
+                    .enter()
+                    .append("path")
+                    .attr("stroke", "white")
+                    .attr("stroke-width", 0.5)
                     .attr("fill", function(d, i) { return color(i); })
-                    .attr("d", arc);
+                    .attr("d", arc)
+
+
             }
         }
 })();

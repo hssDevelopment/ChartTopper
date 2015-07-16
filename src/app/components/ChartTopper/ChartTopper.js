@@ -9,16 +9,13 @@
         .service('chartTopper', chartTopper);
 
     /** @ngInject */
-    function chartTopper($log, $window, donutChart) {
+    function chartTopper($window, donutChart) {
 
         var WIDTH = 150;
         var HEIGHT = 200;
         var PADDING = 2;
 
         function buildBarChart(data, element) {
-            $log.info('element: ' + element);
-            $log.info('data:' + data);
-
             var svg = create(element);
             createBars(svg, data);
             addLabels(svg, data);
@@ -37,7 +34,7 @@
                     height: HEIGHT
                 });
 
-            var viz = svg.append("path")
+            svg.append("path")
                 .attr({
                     d: lineFunction(data),
                     "stroke": "purple",
@@ -45,7 +42,7 @@
                     "fill": "none"
                 });
 
-            var labels = svg.selectAll("text")
+            svg.selectAll("text")
                 .data(data)
                 .enter()
                 .append("text")
