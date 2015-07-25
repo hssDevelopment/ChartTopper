@@ -26,6 +26,6 @@
 
       chartTopper.buildBarChart(data, element);
       chartTopper.buildLineChart(lineData, lineElement);
-      chartTopper.buildDonutChart(data, donutElement);
+      chartTopper.buildDonutChart(data, donutElement, 250, 250);
   }
 })();

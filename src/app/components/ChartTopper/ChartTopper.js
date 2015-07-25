@@ -11,8 +11,8 @@
     /** @ngInject */
     function chartTopper($window, donutChart) {
 
-        var WIDTH = 150;
-        var HEIGHT = 200;
+        var WIDTH = 250;
+        var HEIGHT = 250;
         var PADDING = 2;
 
         function buildBarChart(data, element) {
@@ -60,7 +60,7 @@
         }
 
         function buildDonutChart (data, element){
-            donutChart.build(data, element);
+            donutChart.build(data, element, 250, 250);
         }
 
         var public_api = {
