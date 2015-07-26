@@ -18,7 +18,8 @@
         var pie = d3.layout.pie();
 
         return{
-            build: build
+            build: build,
+            create: create
         };
 
         function build(data, element, height, width) {
@@ -40,13 +41,17 @@
                 .attr("fill", function(d, i) { return arcWrapper.color(i); })
                 .attr("d", arcWrapper.arc);
 
-            //Create Text
+            //Create Text"
             labelBuilder.addDataLabels('center');
 
             svg.append("text")
                 .attr("dy", ".35em")
                 .attr("text-anchor", "middle")
                 .text("Test Text");
+        }
+
+        function create(data, element, height, width){
+
         }
 
     }
