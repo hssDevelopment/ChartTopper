@@ -1,3 +1,17 @@
+<style>
+
+    #d3-line-test rect {
+        fill: steelblue;
+    }
+
+    #d3-line-test  text {
+        fill: gray;
+        font: 10px sans-serif;
+        text-anchor: end;
+    }
+
+</style>
+
 <div class="container">
 
   <div>
@@ -6,24 +20,22 @@
 
   <div class="jumbotron text-center">
       <div class="row">
-          <div class="col-lg-4">
-              <h3>Test div that will hold my Bar svg</h3>
-          </div>
-          <div class="col-lg-4">
+          <!--<div class="col-lg-8">-->
+              <!--<h3>Test div that will hold my Bar svg</h3>-->
+          <!--</div>-->
+          <div class="col-lg-12">
               <h3>Test div that will hold my Line svg</h3>
+              <div class="col-lg-12">
+                  <div id="d3-line-test"></div>
+              </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-12">
               <h3>Test div that will hold my Donut svg</h3>
           </div>
       </div>
       <div class="row">
-          <div class="col-lg-4">
-              <div id="d3-test"></div>
-          </div>
-          <div class="col-lg-4">
-              <div id="d3-line-test"></div>
-          </div>
-          <div class="col-lg-4">
+
+          <div class="col-lg-12">
               <div id="d3-donut-test"></div>
           </div>
       </div>

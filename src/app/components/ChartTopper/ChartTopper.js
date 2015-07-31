@@ -9,7 +9,7 @@
         .service('chartTopper', chartTopper);
 
     /** @ngInject */
-    function chartTopper($window, donutChart, donutService) {
+    function chartTopper($window, donutService, lineChartService) {
 
         var WIDTH = 250;
         var HEIGHT = 250;
@@ -22,46 +22,12 @@
         }
 
         function buildLineChart(data, element){
-            var lineFunction = d3.svg.line()
-                .x(function(d) {return d.month * 3; })
-                .y(function(d) {return HEIGHT - d.sales; })
-                .interpolate("linear");
-
-            var svg = d3.select(element)
-                .append("svg")
-                .attr({
-                    width: WIDTH,
-                    height: HEIGHT
-                });
-
-            svg.append("path")
-                .attr({
-                    d: lineFunction(data),
-                    "stroke": "purple",
-                    "stroke-width": 2,
-                    "fill": "none"
-                });
-
-            svg.selectAll("text")
-                .data(data)
-                .enter()
-                .append("text")
-                .text(function(d){return d.sales})
-                .attr({
-                    x: function(d){ return d.month * 3 - 25},
-                    y: function(d){ return HEIGHT - d.sales},
-                    "font-size": "12px",
-                    "font-family": "sans-serif",
-                    "fill" : "#666666",
-                    "text-anchor": "start",
-                    "dy": ".35em",
-                    "font-weight": "bold"
-                })
+            var margin = {top: 20, right: 20, bottom: 30, left: 40};
+            lineChartService.createLineChart().build(element, 500, 600, margin, data);
         }
 
         function buildDonutChart (data, element){
             donutService.createDonut(data, element, 250, 250, 'Donut Title').build();
-            //donutChart.build(data, element, 250, 250);
         }
 
         var public_api = {
