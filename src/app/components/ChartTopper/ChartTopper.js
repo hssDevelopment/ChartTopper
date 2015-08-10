@@ -16,7 +16,7 @@
         }
 
         function buildLineChart(data, element){
-            lineChartService.createLineChart(data, element, true, 'green').animate('ghost-writer').build();
+            lineChartService.createLineChart(data, element, true, 'steelblue').animate('ghost-writer').build();
         }
 
         function buildDonutChart (data, element){
