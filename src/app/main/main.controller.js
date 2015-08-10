@@ -8,18 +8,8 @@
   /** @ngInject */
   function MainController(chartTopper) {
       var data = [5, 10, 15, 20, 25];
-      var lineData = [
-          {"scale": 10, "data": 20},
-          {"scale": 20, "data": 100},
-          {"scale": 30, "data": 150},
-          {"scale": 40, "data": 121},
-          {"scale": 50, "data": 80},
-          {"scale": 60, "data": 65},
-          {"scale": 70, "data": 48},
-          {"scale": 80, "data":55},
-          {"scale": 90, "data": 23},
-          {"scale": 100, "data": 7}
-      ];
+
+      var lineData = ['45', '55', '62', '35', '45', '71', '78', '65', '41', '93', '81', '87'];
       var element = '#d3-test';
       var lineElement = '#d3-line-test';
       var donutElement = '#d3-donut-test';

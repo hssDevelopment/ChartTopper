@@ -9,21 +9,14 @@
         .service('chartTopper', chartTopper);
 
     /** @ngInject */
-    function chartTopper($window, donutService, lineChartService) {
-
-        var WIDTH = 250;
-        var HEIGHT = 250;
-        var PADDING = 2;
+    function chartTopper(donutService, lineChartService) {
 
         function buildBarChart(data, element) {
-            var svg = create(element);
-            createBars(svg, data);
-            addLabels(svg, data);
+
         }
 
         function buildLineChart(data, element){
-            var margin = {top: 20, right: 20, bottom: 30, left: 40};
-            lineChartService.createLineChart().build(element, 500, 600, margin, data);
+            lineChartService.createLineChart(data, element, true, 'green').animate('ghost-writer').build();
         }
 
         function buildDonutChart (data, element){
@@ -37,54 +30,6 @@
         };
 
         return public_api;
-
-        function create(element){
-            var svg = $window.d3.select(element)
-                .append("svg")
-                .attr("width", WIDTH)
-                .attr("height", HEIGHT);
-            return svg;
-        }
-
-        function createBars(svg, data){
-            svg.selectAll("rect")
-                .data(data)
-                .enter()
-                .append("rect")
-                .attr({
-                    x: function (d, i) {
-                        return i * (WIDTH / data.length);
-                    },
-                    y: function (d) {
-                        return HEIGHT - (d * 4);
-                    },
-                    width: WIDTH / data.length - PADDING,
-                    height: function (d) {
-                        return d * 4;
-                    },
-                    fill: function (d) {
-                        return "rgb(0," + (d * 10) + ", 0)";
-                    }
-                });
-        }
-
-        function addLabels(svg, data){
-            svg.selectAll("text")
-                .data(data)
-                .enter()
-                .append("text")
-                .text(function(d) {return d;})
-                .attr({
-                    "text-anchor" : "middle",
-                    "x": function(d, i){
-                        return i * (WIDTH / data.length) + (WIDTH / data.length - PADDING) / 2 ;
-                    },
-                    "y": function(d) {return HEIGHT - (d * 4) + 15},
-                    "font-family": "sans-serif",
-                    "font-size": 12,
-                    "fill": "#ffffff"
-                });
-        }
 
     }
 })();

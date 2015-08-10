@@ -4,7 +4,7 @@
  */
 (function () {
     angular.module('chartTopperDemo')
-        .service('lineChartService', lineChartService);
+        .service('barChartService', lineChartService);
 
     function lineChartService(yAxisVisitor, xAxisVisitor, barVisitor){
 
