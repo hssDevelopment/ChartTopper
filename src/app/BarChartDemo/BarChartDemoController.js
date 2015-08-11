@@ -24,7 +24,7 @@
        vm.color = 'steelblue';
 
         chartTopper.buildBarChart(data , '#bar-chart-demo', 600, 800, 10)
-            .animate('ghost-writer')
+            .animate(vm.config.animation ? 'ghost-writer' : '')
             .color(vm.color)
             .dataPosition(vm.config.labelPlacement)
             .build();
@@ -34,6 +34,7 @@
             //but hey, it's a demo page
             angular.element('#bar-chart-demo').empty();
             chartTopper.buildBarChart(data , '#bar-chart-demo', 600, 800, 10)
+                .animate(vm.config.animation ? 'ghost-writer' : '')
                 .color(vm.color)
                 .dataPosition(vm.config.labelPlacement)
                 .build();

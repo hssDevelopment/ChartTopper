@@ -29,9 +29,9 @@
             this.fillColor = null;
             this.dataTextPosition = null;
 
-            this.animate = function(animation){
+            this.animate = function(animationDef){
                 if(this.animation === null){
-                    this.animation = animation;
+                    this.animation = animationDef;
                 }
                 return this;
             };
