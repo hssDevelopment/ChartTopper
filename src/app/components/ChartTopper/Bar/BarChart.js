@@ -19,6 +19,7 @@
         function BarChart(data, element, height, width, margin) {
             this.x = null;
             this.y = null;
+            this.animation = null;
             this.data = data;
             this.element = element;
             this.margin = {left: 50 + margin, right: 50 + margin, top: 50 + margin, bottom: 50 + margin};
@@ -27,6 +28,13 @@
             this.width = null;
             this.fillColor = null;
             this.dataTextPosition = null;
+
+            this.animate = function(animation){
+                if(this.animation === null){
+                    this.animation = animation;
+                }
+                return this;
+            };
 
             this.color = function(color){
                 this.fillColor = color;
