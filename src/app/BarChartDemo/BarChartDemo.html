@@ -1,0 +1,36 @@
+<section>
+    <div class="container">
+        <div>
+            <acme-navbar creationDate="main.creationDate" />
+        </div>
+        <h1 class="text-center">Bar Chart Demo - Fake Weekly Sales Data!</h1>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <h4>Bar Chart Animation</h4>
+                <div class="btn-group">
+                    <label class="btn btn-primary" ng-model="BarChart.config.animation" btn-radio="true">On</label>
+                    <label class="btn btn-primary" ng-model="BarChart.config.animation" btn-radio="false">Off</label>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <h4>Label Positioning</h4>
+                <div class="btn-group">
+                    <label class="btn btn-success" ng-model="BarChart.config.labelPlacement" btn-radio="'outside'">Outside Label</label>
+                    <label class="btn btn-success" ng-model="BarChart.config.labelPlacement" btn-radio="'top'">Align Top</label>
+                    <label class="btn btn-success" ng-model="BarChart.config.labelPlacement" btn-radio="'middle'">Align Middle</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4>Enter Bar Color (hex, rgb, or color)</h4>
+                <div class="btn-group">
+                    <input type="text" class="form-control" ng-blur="BarChart.update()" ng-model="BarChart.color">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="chart-container">
+                <div id="bar-chart-demo"></div>
+            </div>
+        </div>
+    </div>
+</section>

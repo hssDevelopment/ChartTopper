@@ -13,6 +13,12 @@
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
+      })
+      .state('bar', {
+         url:'/bar',
+         templateUrl: 'app/BarChartDemo/BarChartDemo.html',
+         controller: 'BarChartDemoController',
+         controllerAs: 'BarChart'
       });
 
     $urlRouterProvider.otherwise('/');

@@ -9,10 +9,10 @@
         .service('chartTopper', chartTopper);
 
     /** @ngInject */
-    function chartTopper(donutService, lineChartService) {
+    function chartTopper(donutService, lineChartService, barChartService) {
 
-        function buildBarChart(data, element) {
-
+        function buildBarChart(data, element, height, width, padding) {
+            return barChartService.createBarChart(data, element, height, width, padding);
         }
 
         function buildLineChart(data, element){
@@ -23,13 +23,11 @@
             donutService.createDonut(data, element, 250, 250, 'Donut Title').build();
         }
 
-        var public_api = {
+        return {
             buildBarChart: buildBarChart,
             buildLineChart: buildLineChart,
             buildDonutChart: buildDonutChart
         };
-
-        return public_api;
 
     }
 })();

@@ -4,30 +4,42 @@
  */
 (function () {
     angular.module('chartTopperDemo')
-        .service('barChartService', lineChartService);
+        .service('barChartService', barChartService);
 
-    function lineChartService(yAxisVisitor, xAxisVisitor, barVisitor){
+    function barChartService(yAxisVisitor, xAxisVisitor, barVisitor){
+
+        var DEFAULT_FILL_COLOR = 'steelblue';
 
         return{
-            createLineChart: function(){
-                return new LineChart();
+            createBarChart: function(data, element, height, width, margin){
+                return new BarChart(data, element, height, width, margin);
             }
         };
 
-        function LineChart() {
+        function BarChart(data, element, height, width, margin) {
             this.x = null;
             this.y = null;
-            this.data = null;
-            this.data = null;
+            this.data = data;
+            this.element = element;
+            this.margin = {left: 50 + margin, right: 50 + margin, top: 50 + margin, bottom: 50 + margin};
             this.svg = null;
-            this.margin = null;
             this.height = null;
             this.width = null;
+            this.fillColor = null;
+            this.dataTextPosition = null;
 
-            this.build = function (element, height, width, margin, data) {
-                this.data = data;
-                this.element = element;
-                this.margin = margin;
+            this.color = function(color){
+                this.fillColor = color;
+                return this;
+            };
+
+            this.dataPosition = function(position){
+                this.dataTextPosition = position;
+                return this;
+            };
+
+            this.build = function () {
+                this.fillColor === null ? this.fillColor = DEFAULT_FILL_COLOR : angular.noop;
                 this.width = width - this.margin.left - this.margin.right;
                 this.height = height - this.margin.top - this.margin.bottom;
                 this.x = d3.scale.ordinal().rangeRoundBands([0, this.width], .3);
@@ -41,7 +53,7 @@
                     .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
 
                 this.x.domain(data.map(function (d) {
-                    return d.scale;
+                    return d.label === null ? '' : d.label;
                 }));
                 this.y.domain([0, d3.max(data, function (d) {
                     return d.data;
