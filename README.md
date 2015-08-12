@@ -18,12 +18,12 @@ This will start the page on port 3000. It can also be viewed here:
 
 Why another D3 chart wrapper library?
 There are so many javascript chart libraries, one might ask "does the world really need another
-one? I think the answer is yes.
+one?" I think the answer is yes.
 
 The charting wrapper libraries I have looked at using are a mass of javascript functions and large
-config blocks. I really hate config blocks. I chose the name chart topper to represent the goal
-of creating an easy to understand, thin wrapper library that would be really easy to use in a
-project.
+config blocks. I really hate config blocks and when reading library source code, it was hard to follow.
+I chose the name chart topper to represent the goal of creating an easy to understand, thin wrapper library
+that would be really easy to use in a project.
 
 The goal of chart topper is three-fold:
 1. Break the charting down into easy steps where people who are new to d3 (like myself) can get
