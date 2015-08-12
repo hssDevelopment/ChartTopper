@@ -13,6 +13,11 @@ gulp serve<br>
 Technologies used for this project and demo app:
 angularJS, Bootstrap, yeoman, gulp, bower, node, npm, D3, and Microsoft Azure (for the hosting)
 
+Helpful tutorials that helped me build Chart Topper:
+https://github.com/mbostock/d3/wiki/Tutorials
+D3 in Action by Elijah Meeks
+
+
 This will start the page on port 3000. It can also be viewed here:
 <a>chart-topper.azurewebsites.net</a>
 

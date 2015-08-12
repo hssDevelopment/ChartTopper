@@ -19,8 +19,8 @@
             return lineChartService.createLineChart(data, element, lineChartOption, color);
         }
 
-        function buildDonutChart (data, element){
-            donutService.createDonut(data, element, 250, 250, 'Donut Title').build();
+        function buildDonutChart (data, element, height, width, title){
+            return donutService.createDonut(data, element, height, width, title);
         }
 
         return {

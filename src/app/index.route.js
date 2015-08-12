@@ -26,6 +26,12 @@
                 templateUrl: 'app/LineChartDemo/LineChartDemo.html',
                 controller: 'LineChartDemoController',
                 controllerAs: 'LineChart'
+            })
+            .state('donut', {
+                url: '/donut',
+                templateUrl: 'app/DonutChartDemo/DonutChartDemo.html',
+                controller: 'DonutChartDemoController',
+                controllerAs: 'DonutChart'
             });
 
         $urlRouterProvider.otherwise('/');

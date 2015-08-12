@@ -1,0 +1,33 @@
+<section>
+    <div class="container">
+        <div>
+            <acme-navbar creationDate="main.creationDate" />
+        </div>
+        <h1 class="text-center">Donut Chart Demo</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Enter Height</h4>
+                <div class="btn-group">
+                    <input type="text" class="form-control" ng-blur="DonutChart.update()" ng-model="DonutChart.config.height">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4>Enter Width</h4>
+                <div class="btn-group">
+                    <input type="text" class="form-control" ng-blur="DonutChart.update()" ng-model="DonutChart.config.width">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4>Enter Donut Title</h4>
+                <div class="btn-group">
+                    <input type="text" class="form-control" ng-blur="DonutChart.update()" ng-model="DonutChart.config.title">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="chart-container">
+                <div id="donut-chart-demo"></div>
+            </div>
+        </div>
+    </div>
+</section>
