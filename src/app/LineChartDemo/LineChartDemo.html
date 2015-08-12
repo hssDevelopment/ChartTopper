@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<section>
+    <div class="container">
+        <div>
+            <acme-navbar creationDate="main.creationDate" />
+        </div>
+        <h1 class="text-center">Line Chart Demo - Yearly Data!</h1>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <h4>Line Chart Animation</h4>
+                <div class="btn-group">
+                    <label class="btn btn-primary" ng-model="LineChart.config.animation" btn-radio="'ghost-writer'">Ghost Writer</label>
+                    <label class="btn btn-primary" ng-model="LineChart.config.animation" btn-radio="'fade-in'">Fade In</label>
+                    <label class="btn btn-primary" ng-model="LineChart.config.animation" btn-radio="'empty'">Off</label>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <h4>Line Chart or Scatter Plot</h4>
+                <div class="btn-group">
+                    <label class="btn btn-success" ng-model="LineChart.config.isLine" btn-radio="true">Line Chart</label>
+                    <label class="btn btn-success" ng-model="LineChart.config.isLine" btn-radio="false">Scatter Plot</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4>Enter Fill Color (hex, rgb, or color)</h4>
+                <div class="btn-group">
+                    <input type="text" class="form-control" ng-blur="LineChart.update()" ng-model="LineChart.color">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="chart-container">
+                <div id="line-chart-demo"></div>
+            </div>
+        </div>
+    </div>
+</section>

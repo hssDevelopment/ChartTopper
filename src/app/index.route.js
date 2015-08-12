@@ -1,28 +1,34 @@
 /**
  * Copyright © 2015 Michael Hensley
  */
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular
-    .module('chartTopperDemo')
-    .config(routeConfig);
+    angular
+        .module('chartTopperDemo')
+        .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('main', {
-        url: '/',
-        templateUrl: 'app/BarChartDemo/intro.html'
-      })
-      .state('bar', {
-         url:'/bar',
-         templateUrl: 'app/BarChartDemo/BarChartDemo.html',
-         controller: 'BarChartDemoController',
-         controllerAs: 'BarChart'
-      });
+    /** @ngInject */
+    function routeConfig($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('main', {
+                url: '/',
+                templateUrl: 'app/intro.html'
+            })
+            .state('bar', {
+                url: '/bar',
+                templateUrl: 'app/BarChartDemo/BarChartDemo.html',
+                controller: 'BarChartDemoController',
+                controllerAs: 'BarChart'
+            })
+            .state('line', {
+                url: '/line',
+                templateUrl: 'app/LineChartDemo/LineChartDemo.html',
+                controller: 'LineChartDemoController',
+                controllerAs: 'LineChart'
+            });
 
-    $urlRouterProvider.otherwise('/');
-  }
+        $urlRouterProvider.otherwise('/');
+    }
 
 })();
