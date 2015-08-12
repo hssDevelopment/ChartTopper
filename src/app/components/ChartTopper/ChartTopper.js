@@ -1,11 +1,11 @@
 /**
- * Created by hensleym on 7/8/15.
+ * Copyright © 2015 Michael Hensley
  */
 (function () {
     'use strict';
 
     angular
-        .module('chartTopperDemo')
+        .module('ChartTopper')
         .service('chartTopper', chartTopper);
 
     /** @ngInject */

@@ -1,8 +1,8 @@
 /**
- *  Welcome to your gulpfile!
- *  The gulp tasks are splitted in several files in the gulp directory
- *  because putting all here was really too long
- */
+ *  Gulp build pipeline provided graciously by the Gulp yeoman generator
+ *  https://github.com/Swiip/generator-gulp-angular
+ **/
+
 
 'use strict';
 

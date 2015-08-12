@@ -1,5 +1,5 @@
 /**
- * Created by hensleym on 7/25/15.
+ * Copyright © 2015 Michael Hensley
  */
 (function(){
     angular

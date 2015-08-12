@@ -1,3 +1,6 @@
+/**
+ * Copyright © 2015 Michael Hensley
+ */
 (function() {
   'use strict';
 

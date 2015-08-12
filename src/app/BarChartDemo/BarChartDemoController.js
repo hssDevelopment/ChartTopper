@@ -1,8 +1,8 @@
 /**
- * Created by hensleym on 8/10/15.
+ * Copyright © 2015 Michael Hensley
  */
 (function(){
-   angular.module('BarChartDemo')
+   angular.module('chartTopperDemo')
        .controller('BarChartDemoController', barChartDemoController);
 
    function barChartDemoController(chartTopper, $scope){

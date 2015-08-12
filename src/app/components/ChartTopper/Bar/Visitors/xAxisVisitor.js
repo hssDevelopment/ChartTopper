@@ -1,8 +1,8 @@
 /**
- * Created by hensleym on 7/30/15.
+ * Copyright © 2015 Michael Hensley
  */
 (function(){
-    angular.module("chartTopperDemo")
+    angular.module("ChartTopper")
         .service("xAxisVisitor", xAxisVisitor);
 
     function xAxisVisitor(){

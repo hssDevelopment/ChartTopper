@@ -1,5 +1,5 @@
 /**
- * Created by hensleym on 7/13/15.
+ * Copyright © 2015 Michael Hensley
  *
  * Thanks to http://zeroviscosity.com/d3-js-step-by-step/step-2-a-basic-donut-chart
  * for the tutorial on making donut charts.

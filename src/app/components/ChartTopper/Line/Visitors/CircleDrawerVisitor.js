@@ -1,8 +1,8 @@
 /**
- * Created by hensleym on 8/4/15.
+ * Copyright © 2015 Michael Hensley
  */
 (function(){
-    angular.module('chartTopperDemo')
+    angular.module('ChartTopper')
         .service('circleDrawerVisitor', circleDrawerVisitor);
 
     function circleDrawerVisitor(){

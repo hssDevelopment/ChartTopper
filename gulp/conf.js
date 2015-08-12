@@ -1,4 +1,7 @@
 /**
+ *  Gulp build pipeline provided graciously by the Gulp yeoman generator
+ *  https://github.com/Swiip/generator-gulp-angular
+ *
  *  This file contains the variables used in other gulp files
  *  which defines tasks
  *  By design, we only put there very generic config values

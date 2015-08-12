@@ -1,9 +1,9 @@
 /**
- * Created by hensleym on 8/4/15.
+ * Copyright © 2015 Michael Hensley
  */
 (function(){
     'use strict';
-    angular.module('chartTopperDemo')
+    angular.module('ChartTopper')
         .service('lineDrawerVisitor', lineDrawerVisitor);
 
     function lineDrawerVisitor(){

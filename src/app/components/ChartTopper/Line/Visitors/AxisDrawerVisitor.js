@@ -1,8 +1,8 @@
 /**
- * Created by hensleym on 8/4/15.
+ * Copyright © 2015 Michael Hensley
  */
 (function(){
-    angular.module('chartTopperDemo')
+    angular.module('ChartTopper')
         .service('axisDrawerVisitor', AxisDrawerVisitor);
 
     var scoreRange = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];

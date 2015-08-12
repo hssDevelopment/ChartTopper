@@ -1,3 +1,8 @@
+/**
+ *  Gulp build pipeline provided graciously by the Gulp yeoman generator
+ *  https://github.com/Swiip/generator-gulp-angular
+ **/
+
 'use strict';
 
 var path = require('path');

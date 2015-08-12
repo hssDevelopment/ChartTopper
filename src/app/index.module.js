@@ -1,8 +1,10 @@
+/**
+ * Copyright © 2015 Michael Hensley
+ */
 (function() {
   'use strict';
 
-  angular.module('BarChartDemo', []);
-  angular
-    .module('chartTopperDemo', ['ngAnimate', 'BarChartDemo', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap']);
+  angular.module('ChartTopper', []);
+  angular.module('chartTopperDemo', ['ngAnimate', 'ChartTopper', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap']);
 
 })();

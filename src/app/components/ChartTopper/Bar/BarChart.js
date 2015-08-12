@@ -1,9 +1,9 @@
 /**
- * Created by hensleym on 7/27/15.
+ * Copyright © 2015 Michael Hensley
  *
  */
 (function () {
-    angular.module('chartTopperDemo')
+    angular.module('ChartTopper')
         .service('barChartService', barChartService);
 
     function barChartService(yAxisVisitor, xAxisVisitor, barVisitor){

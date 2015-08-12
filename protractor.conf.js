@@ -1,3 +1,8 @@
+/**
+ *  Protractor config provided graciously by the Gulp yeoman generator
+ *  https://github.com/Swiip/generator-gulp-angular
+ **/
+
 'use strict';
 
 var paths = require('./.yo-rc.json')['generator-gulp-angular'].props.paths;
