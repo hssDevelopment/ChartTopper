@@ -6,12 +6,15 @@ Copyright (c) 2015 Michael Hensley with the MIT License
 See the LICENSE file for distributed licensing terms.
 
 To Build the Demo Page (Including Chart Topper)
-npm install
-bower install
-gulp serve
+npm install<br>
+bower install<br>
+gulp serve<br>
+
+Technologies used for this project and demo app:
+angularJS, Bootstrap, yeoman, gulp, bower, node, npm, D3, and Microsoft Azure (for the hosting)
 
 This will start the page on port 3000. It can also be viewed here:
-chart-topper.azurewebsites.net
+<a>chart-topper.azurewebsites.net</a>
 
 Why another D3 chart wrapper library?
 There are so many javascript chart libraries, one might ask "does the world really need another
