@@ -21,14 +21,27 @@ now, in any part of your project, inject the service chartTopper. <br><br>
 
 chartTopper has 3 methods: <br>
 buildBarChart(data, element, height, width, padding)<br>
-data: The data to chart about
+data: The data to chart about. The data is passed in via an array that contains a json entry for each bar to draw. The
+data should be formatted:
+[{"label": "MON", "data": 50}]
+where label is the x axis label and data is the data to graph. The bar chart will calculate the y axis.
+
 element: the element to attach the chart to
 height: height of the chart
 width: the width of the chart
 padding: chart padding on the element
 
+To add a color, call the .coclor method on the buildBarChart object returned:
+buildBarChart(data, element, height, width, padding).color('blue')
+color can be any valid string color, RGB, or hex. This method should be called before build.
+
 buildLineChart(data, element, lineChartOption, color)<br>
-data: the data to chart about
+data: the data to chart about. Right now the line chart is configured to draw a graph that represents the 12 months
+of the year -> passing in a javascript array with 12 entries will draw a line chart:
+
+var lineData = ['45', '55', '62', '35', '45', '71', '78', '65', '41', '93', '81', '87'];
+This will be flushed out in the future to draw a line chart with an x axis configuration to whatever the user desires.
+
 element: the element to attach the chart to
 lineChartOption: a true/false variable -> if it's true, it will draw a line chart. False will draw a scatter plot.
 color: the color of the line/dots on the line chart
@@ -47,6 +60,8 @@ the chart. The animate options are:
 .animate('fade-in') [For the line chart]
 
 The donut chart will animate by default.
+
+For an example in action, please see the demo controllers under BarChartDemo, LineChartDemo, and DonutChartDemo
 
 #Technologies used for this project and demo app:
 angularJS, Bootstrap, yeoman, gulp, bower, node, npm, D3, and Microsoft Azure (for the hosting)
