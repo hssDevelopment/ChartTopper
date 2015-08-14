@@ -2,8 +2,10 @@
 An Angular JS Module that allows users to draw common charts (Donut, Line, and Bar), powered
 by D3.js.
 
+Bug Tracker: michael-hensley@live.com
+
 Copyright (c) 2015 Michael Hensley with the MIT License
-See the LICENSE file for distributed licensing terms.
+See the COPYING file for distributed licensing terms.
 
 #Build
 npm install<br>
