@@ -10,6 +10,9 @@ npm install<br>
 bower install<br>
 gulp serve<br>
 
+This will start the page on port 3000. It can also be viewed here:
+<a>chart-topper.azurewebsites.net</a>
+
 #Api
 include ChartTopper as an angular dependency in your module -> angular.module('myModule', ['ChartTopper'])<br>
 now, in any part of your project, inject the service chartTopper. <br><br>
@@ -49,9 +52,6 @@ angularJS, Bootstrap, yeoman, gulp, bower, node, npm, D3, and Microsoft Azure (f
 #Helpful tutorials that helped me build Chart Topper:
 https://github.com/mbostock/d3/wiki/Tutorials
 D3 in Action by Elijah Meeks
-
-#This will start the page on port 3000. It can also be viewed here:
-<a>chart-topper.azurewebsites.net</a>
 
 #Why another D3 chart wrapper library?
 There are so many javascript chart libraries, one might ask "does the world really need another
